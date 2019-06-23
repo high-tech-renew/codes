@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://high-tech-renew.github.io/codes/icomoon2/style.css">
+<style>
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  color: #9ba2a8;
+}
+td {
+font: normal normal .95rem 'Trebuchet MS',Trebuchet,sans-serif !important;
+}
+/***************************
+Background Overlay
+***************************/  
+  .post-outer-container {
+    margin: 0px auto;
+    background-color: rgba(29,29,29,0.8) !important;
+    border-radius: 15px 50px 30px 5px;
+    padding: 10px 25px;
+    width: auto !important;
+    height: auto !important;
+}
+/***************************
+Background Overlay
+***************************/
+
+/***************************
+MENU MENU MENU
+***************************/
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 105;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+/***************************
+MENU MENU MENU
+***************************/
+/***************************/
+ LOGO LOGO LOGO LOGO LOGO
+/***************************/
+div.blog-name.container {
+    position: relative;
+}
+div.header-widget a img {
+    position: absolute;
+    top: 116%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/***************************/
+ LOGO LOGO LOGO LOGO LOGO
+/***************************/
+/***************************
+MOBILE MOBILE MOBILE
+***************************/
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+ /*  SECTIONS ======= */
+ 
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+ 
+/*  GROUPING ======= */
+ 
+ 
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+ 
+/*  GRID COLUMN SETUP ======= */
+ 
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+ 
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+ 
+ 
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+ 
+@media only screen and (max-width: 720px) {
+    .col { 
+        margin: 1% 0 1% 0%;
+    }
+}
+/*  GRID OF THREE ======= */
+ 
+     
+.span_3_of_3 {
+    width: 100%; 
+}
+ 
+.span_2_of_3 {
+    width: 66.13%; 
+}
+ 
+.span_1_of_3 {
+    width: 32.26%; 
+}
+ 
+ 
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+ 
+@media only screen and (max-width: 720px) {
+    .span_3_of_3 {
+        width: 100%; 
+    }
+    .span_2_of_3 {
+        width: 100%; 
+    }
+    .span_1_of_3 {
+        width: 100%;
+    }
+}
+/***************************
+MOBILE MOBILE MOBILE
+***************************/
+/***************************
+SHOWCASE SHOWCASE SHOWCASE
+***************************/
+@keyframes slidy {
+0% { left: 0%; }     /* 0 - 30% of animation time */
+30% { left: 0%; }    /* 1st slide will be visible */
+33% { left: -100%; } /* 30% - 33% slide change will occur */
+63% { left: -100%; } /* etc.. */
+66% { left: -200%; }
+96% { left: -200%; }
+100% { left: 0%; }
+}
+/***************************
+These are the styles
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+These are the styles
+***************************/
+
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+
+div#slider #overlay .num { width: 20%; display: inline-block; *position: relative; }
+div#slider #overlay {
+  position: relative;
+  padding: 10px; 
+  height: 100px;
+  width: 500%;
+  margin: 0;
+/*  top: 0px; old top for words section*/
+  top: -12px;
+    font-size: 1.4em;
+/*    color: #F90505; red */
+/*    color: #613aa9; violet */
+    color: #F90505;
+    text-shadow: 2px 2px #581845;
+    font-weight: bold;
+    font-style: italic;
+  animation: 30s slidy infinite; 
+}
+.overtext  {
+    font-size: 0.8em;
+    color: #ffffff;
+    text-shadow: 1px 1px #581845;
+    font-weight: bold;
+    font-style: italic;
+}
+.bg {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 50%;
+    height: 100%;
+/*    border-style: solid; */
+/*    border-width: 5px; */
+/*    border-color: rgba(46, 204, 113, 0.5); */
+/*    border-radius: 5px; */
+/*  background-color: rgba(97, 58, 169, 0.5); violet */
+/*  background-color: rgba(249, 5, 5, 0.5); red */
+/*  background-color: rgba(184, 227, 86, 0.5); #b8e356 green */
+/*  background-color: rgba(255, 196, 119, 0.5); #ffc477 orange */
+/*  background-color: rgba(121, 187, 255, 0.5); #79bbff blue */
+    background-color: rgba(97, 58, 169, 0.5);
+}
+.round2 {
+    border-radius:10%;
+
+}
+/***************************
+SHOWCASE SHOWCASE SHOWCASE
+***************************/
+/***************************
+BUTTONS BUTTONS BUTTONS 
+***************************/
+.myButtonHtr001 {
+ -moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+ -webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+ box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+ background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b8e356), color-stop(1, #a5cc52));
+ background:-moz-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+ background:-webkit-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+ background:-o-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+ background:-ms-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+ background:linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e356', endColorstr='#a5cc52',GradientType=0);
+ background-color:#b8e356;
+ -moz-border-radius:6px;
+ -webkit-border-radius:6px;
+ border-radius:6px;
+ border:1px solid #83c41a;
+ display:inline-block;
+ cursor:pointer;
+ color:#ffffff;
+ font-family:Arial;
+ font-size:1em;
+ font-weight:bold;
+ padding:6px 24px;
+ text-decoration:none;
+ text-shadow:0px 1px 0px #86ae47;
+    height: 2em;
+    padding: 2% 2%;
+    width: 95%;
+    text-align: center;
+    margin: 0.2em;
+}
+.myButtonHtr001:hover {
+ background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a5cc52), color-stop(1, #b8e356));
+ background:-moz-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+ background:-webkit-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+ background:-o-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+ background:-ms-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+ background:linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5cc52', endColorstr='#b8e356',GradientType=0);
+ background-color:#a5cc52;
+}
+.myButtonHtr001:active {
+ position:relative;
+ top:1px;
+}
+.myButtonHtr002 {
+ -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+ -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+ box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+ background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
+ background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
+ background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
+ background:-o-linear-gradient(top, #79bbff 5%, #378de5 100%);
+ background:-ms-linear-gradient(top, #79bbff 5%, #378de5 100%);
+ background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+ background-color:#79bbff;
+ -moz-border-radius:6px;
+ -webkit-border-radius:6px;
+ border-radius:6px;
+ border:1px solid #84bbf3;
+ display:inline-block;
+ cursor:pointer;
+ color:#ffffff;
+ font-family:Arial;
+ font-size:1em;
+ font-weight:bold;
+ padding:6px 24px;
+ text-decoration:none;
+ text-shadow:0px 1px 0px #528ecc;
+    height:  2em;
+    padding: 2% 2%;
+    width: 95%;
+    text-align: center;
+    margin: 0.2em;
+}
+.myButtonHtr002:hover {
+ background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+ background:-moz-linear-gradient(top, #378de5 5%, #79bbff 100%);
+ background:-webkit-linear-gradient(top, #378de5 5%, #79bbff 100%);
+ background:-o-linear-gradient(top, #378de5 5%, #79bbff 100%);
+ background:-ms-linear-gradient(top, #378de5 5%, #79bbff 100%);
+ background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+ background-color:#378de5;
+}
+.myButtonHtr002:active {
+ position:relative;
+ top:1px;
+}
+.myButtonHtr003 {
+ -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+ -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+ box-shadow:inset 0px 1px 0px 0px #fce2c1;
+ background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+ background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+ background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+ background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+ background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+ background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+ background-color:#ffc477;
+ -moz-border-radius:6px;
+ -webkit-border-radius:6px;
+ border-radius:6px;
+ border:1px solid #eeb44f;
+ display:inline-block;
+ cursor:pointer;
+ color:#ffffff;
+ font-family:Arial;
+ font-size:1em;
+ font-weight:bold;
+ padding:6px 24px;
+ text-decoration:none;
+ text-shadow:0px 1px 0px #cc9f52;
+    height:  2em;
+    padding: 2% 2%;
+    width: 95%;
+    text-align: center;
+    margin: 0.2em;
+}
+.myButtonHtr003:hover {
+ background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477));
+ background:-moz-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+ background:-webkit-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+ background:-o-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+ background:-ms-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+ background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477',GradientType=0);
+ background-color:#fb9e25;
+}
+.myButtonHtr003:active {
+ position:relative;
+ top:1px;
+}
+/***************************
+BUTTONS BUTTONS BUTTONS 
+***************************/
+/***************************
+NEWSLETTER NEWSLETTER NEWSLETTER 
+***************************/
+*/
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+/*    width: 100%; */
+/*    background-color: #4CAF50; */
+/*    color: white; */
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+/*    background-color: #45a049; */
+}
+
+#mc_embed_signup {
+/*    border-radius: 5px; */
+/*    background-color: #f2f2f2; */
+/*    background-color: #505050; */
+    padding: 20px;
+}
+/*
+/***************************
+NEWSLETTER NEWSLETTER NEWSLETTER 
+***************************/
+/***************************
+MARGINS MARGINS MARGINS 
+***************************/
+.marginH { 
+    display: block;
+    font-size: 1.3em;
+    margin-top: 1.3em;
+    margin-bottom: 0.2em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+/***************************
+MARGINS MARGINS MARGINS 
+***************************/
+/***************************
+MARGINS MARGINS MARGINS 
+***************************/
+.marginB { 
+    display: block;
+/*    font-size: 1.4em; */
+    margin-top: 0.1em !important;
+    margin-bottom: 0.1em !important;
+    margin-left: 0;
+    margin-right: 0;
+/*    font-weight: bold; */
+}
+/***************************
+MARGINS MARGINS MARGINS 
+***************************/
+/***************************
+FIGURE TAG FIGURE TAG 
+***************************/
+figure {
+    margin: 0px;
+    padding: 0px;
+}
+/***************************
+FIGURE TAG FIGURE TAG 
+***************************/
+/***************************
+FRAME FRAME FRAME 
+***************************/
+.iframe01 {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+    border: 0.5px solid #ED9C55;
+  overflow:hidden; /* wrap floats and margins */
+    background-color: #505050;
+
+  -moz-box-shadow: 4px 4px 14px #000;
+  -webkit-box-shadow: 4px 4px 14px #000;
+  box-shadow: 4px 4px 14px #000;
+    padding: 4px;
+/*
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  -moz-transform:rotate(20deg);
+  -webkit-transform:rotate(20deg);
+  -o-transform:rotate(20deg);
+  -ms-transform:rotate(20deg);
+  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=.2);
+/*
+}
+/***************************
+FRAME FRAME FRAME
+***************************/
+</style>
+</head>
+<body><div class="post-outer-container">
+ <div class="section group"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></div>
+<!-- ROW 1 ROW 1 ROW 1 -->
+<!-- ROW 1 ROW 1 ROW 1 -->
+<!-- ROW 1 ROW 1 ROW 1 -->
+<!-- ROW 1 ROW 1 ROW 1 -->
+<!-- ROW 1 ROW 1 ROW 1 -->
+<!-- ROW 1 ROW 1 ROW 1 -->
+<!-- ROW 1 ROW 1 ROW 1 -->
+ <div class="section group">
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+  <div class="col span_2_of_3">
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<h1><figure><img src="https://3.bp.blogspot.com/-E7ZmECICW2s/WEuH6XMJnHI/AAAAAAAAAE0/jQP_uK6nNJoS7LmJ56Wief8L_DgepMyggCLcB/s320/htrwee_0x90.png" alt="Informatics Solutions" width="35" height="35" align="left" hspace="10" /></figure> Informatics Solutions</h1>
+<h3>For Server, Computers, Laptops, Tablets & Mobiles</h3>
+<!-- MAIN MAIN MAIN -->
+<!-- MAIN MAIN MAIN -->
+<!-- MAIN MAIN MAIN -->
+<div id="slider" class="round2">
+<figure>
+<a href="../p/about.html"><img src="https://1.bp.blogspot.com/-N9-shcHuwU0/WEx_IAZq1UI/AAAAAAAAAFw/AMxY9zJTIlAWHVEcuZhqHNx2Hf83D5TWwCLcB/s1600/imgS1.jpg" alt="A+ Certified"></a>
+<a href="../p/about.html"><img src="https://1.bp.blogspot.com/-xmzuSmD2Ppg/WEx_XQnf0WI/AAAAAAAAAF0/g_L5feJ8U0UVnLIp_67CyXLix6hzaqfeACLcB/s1600/imgS2.jpg" alt="Network+ Certifiec"></a>
+<a href="../p/about.html"><img src="https://2.bp.blogspot.com/-RMj1InhZHOE/WEx_e2CFIHI/AAAAAAAAAF4/UFtgWsktEmc951zLJm6rHHeh38ypqz-kwCLcB/s1600/imgS3.jpg" alt="Web Development"></a>
+</figure>
+<div id="overlay" class="bg">
+<div class="num">High-Tech Renew Mission and
+<br /><span class="overtext"> How to Help the Environment</span>
+<br /><span class="overtext"> </span></div>
+<div class="num">What High-Tech Renew offers
+<br /><span class="overtext"> as donation?</span>
+<br /><span class="overtext"> </span></div>
+<div class="num">Would you like a free
+<br /><span class="overtext"> Technological Service or</span>
+<br /><span class="overtext"> Informatics Project?</span></div>
+</div>
+</div>
+<!-- MAIN MAIN MAIN -->
+<!-- MAIN MAIN MAIN -->
+<!-- MAIN MAIN MAIN -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+    </div>
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+  <div class="col span_1_of_3">
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- NEWSLETTER -->
+<!-- NEWSLETTER -->
+<!-- NEWSLETTER -->
+<h4 class="marginH" style="font-weight: bold;font-style: italic;"><figure><img src="https://1.bp.blogspot.com/-WT_XavlkPic/WG22Rs1a99I/AAAAAAAAAIY/N5xWbVKTBXc4Z-kVGqPrrhBwAGcRHXg5gCLcB/s1600/Places-mail-folder-inbox-icon.png" alt="Newsletter" width="25" height="25" align="left" hspace="10" /></figure>
+Newsletter</h4>
+<!-- FORM -->
+<div id="mc_embed_signup" class="iframe01">
+<p>Subscribe to High-Tech Renew newsletter to receive exclusive content and the latest news on Technological Services and Informatics Projects.<br /><span class="asterisk" style="color: red;">*</span> indicates required</p>
+<form action="//hightechrenew.us14.list-manage.com/subscribe/post?u=ea45c68ab6c5b78e8827bee3b&amp;id=d2fe07ea73" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+ 
+<div class="indicates-required"></div>
+<div class="mc-field-group">
+ <label for="mce-EMAIL">Email Address  <span class="asterisk" style="color: red;">*</span>
+</label>
+ <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<!--
+<div class="mc-field-group">
+ <label for="mce-FNAME">First Name </label>
+ <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+</div>
+<div class="mc-field-group">
+ <label for="mce-LNAME">Last Name </label>
+ <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+</div>
+-->
+ <div id="mce-responses" class="clear">
+  <div class="response" id="mce-error-response" style="display:none"></div>
+  <div class="response" id="mce-success-response" style="display:none"></div>
+ </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ea45c68ab6c5b78e8827bee3b_d2fe07ea73" tabindex="-1" value=""></div>
+    <div class="clear"><input style="width: 100%;" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="myButtonHtr003"></div>
+    </div>
+</form>
+</div>
+<!-- FORM -->
+<!-- NEWSLETTER -->
+<!-- NEWSLETTER -->
+<!-- NEWSLETTER -->
+<!-- SM -->
+<!-- SM -->
+<!-- SM -->
+<div style="margin-top:2em;">
+<p>
+<!-- YOUTUBE -->
+<script src="https://apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UC2-4ZGaxTwMtbASc0XYeBdw" data-layout="full" data-theme="dark" data-count="hidden"></div>
+<!-- YOUTUBE -->
+</p>
+<p>
+<!-- TWITTER -->
+<a href="https://twitter.com/hightechrenew" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @hightechrenew</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!-- TWITTER -->
+</p>
+<p>
+<!-- FACEBOOK -->
+<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fhightechrenew&width=122&layout=button&action=like&size=large&show_faces=false&share=true&height=65&appId=444441525702836" width="100%" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+<!-- FACEBOOK -->
+</p>
+</div>
+<!-- SM -->
+<!-- SM -->
+<!-- SM -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+      </div>
+  </div>
+<!-- ROW 2 ROW 2 ROW 2 -->
+<!-- ROW 2 ROW 2 ROW 2 -->
+<!-- ROW 2 ROW 2 ROW 2 -->
+<!-- ROW 2 ROW 2 ROW 2 -->
+<!-- ROW 2 ROW 2 ROW 2 -->
+<!-- ROW 2 ROW 2 ROW 2 -->
+<!-- ROW 2 ROW 2 ROW 2 -->
+<div class="section group">
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<!-- COLUMN 1 COLUMN 1 COLUMN 1 -->
+<div class="col span_1_of_3">
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<h4 class="marginH" style="font-weight: bold;font-style: italic;"><figure><img src="https://1.bp.blogspot.com/-rBfMV6er_Ak/WEuMwEjGbsI/AAAAAAAAAFE/lUQoTEK9WTc78eBBrg8vozXs1jRbNyN8wCLcB/s320/imgT1.png" alt="Technological Services" width="25" height="25" align="left" hspace="10" /></figure>
+Technological Services</h4>
+<a class="myButtonHtr002" style="color: white;text-decoration: none;text-align: left;" href="../p/prevent-lost-information.html"><span class="icon-circle-right"> Prevent Lost Information</span></a>
+<a class="myButtonHtr002" style="color: white;text-decoration: none;text-align: left;" href="../p/recover-lost-information.html"><span class="icon-circle-right"> Recover Lost Information</span></a>
+<a class="myButtonHtr002" style="color: white;text-decoration: none;text-align: left;" href="../p/speed-up-your-it-device.html"><span class="icon-circle-right"> Speed Up Your I.T. Device</span></a>
+<a class="myButtonHtr002" style="color: white;text-decoration: none;text-align: left;" href="../p/wireless-interconnection.html"><span class="icon-circle-right"> Wireless Interconnection</span></a>
+<a class="myButtonHtr002" style="color: white;text-decoration: none;text-align: left;" href="../p/eliminate-viruses-spyware.html"><span class="icon-circle-right"> Eliminate Viruses &amp; Spyware</span></a>
+<a class="myButtonHtr002" style="color: white;text-decoration: none;text-align: left;" href="../p/technology-upgrades.html"><span class="icon-circle-right"> Technology Upgrades</span></a>
+<a class="myButtonHtr002" style="color: white;text-decoration: none;text-align: left;" href="../p/eliminate-itdevice-problems.html"><span class="icon-circle-right"> Eliminate I.T. Device Problems</span></a>
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+    </div>
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<!-- COLUMN 2 COLUMN 2 COLUMN 2 -->
+<div class="col span_1_of_3">
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<h4 class="marginH" style="font-weight: bold;font-style: italic;"><figure><img src="https://3.bp.blogspot.com/-RYxjVZYBZVQ/WEuNatMTbcI/AAAAAAAAAFM/ZjN5iorP4pAIsz7fZzy8D_G9OSQxeySbACLcB/s320/imgT3.png" alt="Informatics Projects" width="25" height="25" align="left" hspace="10" /></figure>
+Informatics Projects</h4><p></p>
+<p class="marginB"><a style="font-size:1.3em;text-align: left;" href="../p/monthly-it-support-and-maintenance.html"><span class="icon-circle-right"> Monthly Support</span></a></p>
+<p class="marginB">Monthly, keep your technology current, lower your costs, and minimize downtime with TECHNOLOGIES MANAGEMENT AND MONITORING plans ...</p>
+<p class="marginB"><a style="font-size:1.3em;text-align: left;" href="../p/digital-platforms.html"><span class="icon-circle-right"> Digital Platforms</span></a></p>
+<p class="marginB">Affordable Web Solution! Professional interactive presence development and long term maintenance. Web-Site, Social-Media, Mobile-App ...</p>
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+  </div>
+<!-- COLUMN 3 COLUMN 3 COLUMN 3 -->
+<!-- COLUMN 3 COLUMN 3 COLUMN 3 -->
+<!-- COLUMN 3 COLUMN 3 COLUMN 3 -->
+<!-- COLUMN 3 COLUMN 3 COLUMN 3 -->
+<!-- COLUMN 3 COLUMN 3 COLUMN 3 -->
+<!-- COLUMN 3 COLUMN 3 COLUMN 3 -->
+<!-- COLUMN 3 COLUMN 3 COLUMN 3 -->
+<div class="col span_1_of_3">
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<h4 class="marginH" style="font-weight: bold;font-style: italic;"><figure><img src="https://1.bp.blogspot.com/-iwtJhFB0oNA/WEuNBqJzaQI/AAAAAAAAAFI/Ae-vtIMcGG84951-ODE076IkgulGr3H2wCLcB/s320/imgT2.png" alt="Immediate Help" width="25" height="25" align="left" hspace="10" /></figure>
+Immediate Help</h4>
+<a class="myButtonHtr001" style="color: white;text-decoration: none;" href="https://www.facebook.com/hightechrenew" target="_blank"><strong><span class="icon-facebook"> Tips</span></strong></a>
+
+<a class="myButtonHtr001" style="color: white;text-decoration: none;" href="https://twitter.com/hightechrenew" target="_blank"><strong><span class="icon-twitter"> News</span></strong></a>
+
+<a class="myButtonHtr001" style="color: white;text-decoration: none;" href="https://www.youtube.com/hightechrenew" target="_blank"><strong><span class="icon-youtube"> Guides</span></strong></a>
+
+<a class="myButtonHtr001" style="color: white;text-decoration: none;" href="http://fb.me/msg/hightechrenew" target="_blank"><span class="icon-bubbles4"> Send your questions or concerns via Facebook Instant Message</span></a>
+
+<a class="myButtonHtr003" style="color: white;text-decoration: none;" href="../p/contact.html" target="_self"><span class="icon-aid-kit"> Request Support and <strong>Contact</strong></span></a>
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+<!-- [] -->
+  </div>
+      </div>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="../p/home.html">Home</a>
+    <a href="../p/about.html">About</a>
+    <a href="../p/services.html">Services</a>
+    <a href="../p/projects.html">Projects</a>
+    <a href="../p/contact.html">Contact</a>
+    <a href="http://es.hightechrenew.com/p/inicio.html">| Español |</a>
+  </div>
+</div>
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+     
+  </div> <!-- [background overlay div close] --> </body>
+</html>
